@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'loginprof',
+    loadChildren: () => import('./paginasprof/loginprof/loginprof.module').then( m => m.LoginprofPageModule)
+  },
+  {
+    path: 'cadastroprof',
+    loadChildren: () => import('./paginasprof/cadastroprof/cadastroprof.module').then( m => m.CadastroprofPageModule)
+  },
+  {
+    path: 'inicio',
+    loadChildren: () => import('./paginasprof/inicio/inicio.module').then( m => m.InicioPageModule)
+  },
 ];
 
 @NgModule({
