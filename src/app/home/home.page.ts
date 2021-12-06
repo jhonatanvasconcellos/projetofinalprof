@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,13 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
-
+  constructor(private nav: NavController) { }
+  irParaLogin() {
+    console.log('Funcão irParaLogin');
+    this.nav.navigateForward('loginprof');
+  }
+  irParaCadastro() {
+    console.log('Funcão irParaCadastro');
+    this.nav.navigateForward('cadastroprof');
+  }
 }
