@@ -22,7 +22,11 @@ const routes: Routes = [
   {
     path: 'inicio',
     loadChildren: () => import('./paginasprof/inicio/inicio.module').then( m => m.InicioPageModule)
+  },  {
+    path: 'cadastroprof2',
+    loadChildren: () => import('./paginasprof/cadastroprof2/cadastroprof2.module').then( m => m.Cadastroprof2PageModule)
   },
+
 ];
 
 @NgModule({

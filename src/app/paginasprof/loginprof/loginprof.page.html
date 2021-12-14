@@ -1,14 +1,19 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Faça seu login</ion-title>
+    <ion-buttons slot='start'>
+      <ion-button (click)='irParaHome()'>
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
     <div id="container">
-        <ion-input placeholder="Email"></ion-input><br/>
-        <ion-input placeholder="Senha"></ion-input><br/>
-        <ion-button (click)='irParaInicio()'>Login</ion-button>
+        <ion-input type="email" placeholder="Email" [(ngModel)]="email"></ion-input><br/>
+        <ion-input type="password" placeholder="Senha" [(ngModel)]="senha"></ion-input><br/>
+        <ion-button (click)='logar()'>Login</ion-button>
         
       </div>
 </ion-content>

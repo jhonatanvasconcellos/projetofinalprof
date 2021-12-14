@@ -13,7 +13,7 @@ export class HomePage {
     console.log('Funcão irParaLogin');
     this.nav.navigateForward('loginprof');
   }
-  irParaCadastro() {
+  irParaRegistro() {
     console.log('Funcão irParaCadastro');
     this.nav.navigateForward('cadastroprof');
   }
