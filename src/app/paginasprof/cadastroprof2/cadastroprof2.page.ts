@@ -40,6 +40,7 @@ export class Cadastroprof2Page implements OnInit {
     prof['tel_prof'] = this.telefone;
     prof['conta_banco'] = this.conta;
     prof['Ag_banco'] = this.agencia;
+    prof['email'] = this.email;
 
     let usr = {};
     usr['email'] = this.email;
@@ -48,6 +49,7 @@ export class Cadastroprof2Page implements OnInit {
     this.login.registrar(usr).then(
         resolve => {
           this.service.incluirBD(prof);
+          this.nav.navigateForward('inicio');
         },
         error => {
           console.log("Deu ruim");

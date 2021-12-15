@@ -15,4 +15,8 @@ export class DadoscliService {
     
     this.firestore.collection('Profissional').add(prof);
   }
+
+  listDados(){
+    return this.firestore.collection('Profissional').snapshotChanges();
+  }
 }

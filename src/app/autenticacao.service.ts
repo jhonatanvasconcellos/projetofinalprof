@@ -26,6 +26,10 @@ logar(usr){
   });
 }
 
+logado(){
+  return this.auth.user;
+}
+
 sair(){
   this.auth.signOut();
 }

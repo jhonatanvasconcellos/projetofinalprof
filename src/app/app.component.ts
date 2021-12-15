@@ -13,7 +13,30 @@ export class AppComponent {
     private login: AutenticacaoService
   ) { }
 
-  sair() {
+  irParaDados(){
+    console.log('Função irParaDados');
+    this.nav.navigateForward('meusdados');
+  }
+  irParaChat(){
+    console.log('Funcão irParaChat');
+    this.nav.navigateForward('chat');
+  }
+  irParaHistorico(){
+    console.log('Funcão irParaHistorico');
+    this.nav.navigateForward('historico');
+  }
+  irParaRepasse(){
+    console.log('Funcão irParaRepasse');
+    this.nav.navigateForward('repasse');
+  }
+  irParaAjuda(){
+    console.log('Funcão irParaAjuda');
+    this.nav.navigateForward('ajuda');
+  }
+  irParaConfig(){
+    console.log('Funcão irParaConfig');
+    this.nav.navigateForward('configuracao');
+  } sair(){
     this.login.sair();
     this.nav.navigateForward('home');
   }

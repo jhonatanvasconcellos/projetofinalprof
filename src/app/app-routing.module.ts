@@ -26,6 +26,34 @@ const routes: Routes = [
     path: 'cadastroprof2',
     loadChildren: () => import('./paginasprof/cadastroprof2/cadastroprof2.module').then( m => m.Cadastroprof2PageModule)
   },
+  {
+    path: 'meusdados',
+    loadChildren: () => import('./paginasprof/meusdados/meusdados.module').then( m => m.MeusdadosPageModule)
+  },
+  {
+    path: 'chat',
+    loadChildren: () => import('./paginasprof/chat/chat.module').then( m => m.ChatPageModule)
+  },
+  {
+    path: 'historico',
+    loadChildren: () => import('./paginasprof/historico/historico.module').then( m => m.HistoricoPageModule)
+  },
+  {
+    path: 'repasse',
+    loadChildren: () => import('./paginasprof/repasse/repasse.module').then( m => m.RepassePageModule)
+  },
+  {
+    path: 'ajuda',
+    loadChildren: () => import('./paginasprof/ajuda/ajuda.module').then( m => m.AjudaPageModule)
+  },
+  {
+    path: 'configuracao',
+    loadChildren: () => import('./paginasprof/configuracao/configuracao.module').then( m => m.ConfiguracaoPageModule)
+  },
+  {
+    path: 'edita-dados',
+    loadChildren: () => import('./paginasprof/edita-dados/edita-dados.module').then( m => m.EditaDadosPageModule)
+  },
 
 ];
 
