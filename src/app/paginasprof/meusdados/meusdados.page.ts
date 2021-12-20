@@ -36,7 +36,8 @@ export class MeusdadosPage implements OnInit {
           telprof: e.payload.doc.data()['tel_prof'],
           agencia: e.payload.doc.data()['Ag_banco'],
           conta: e.payload.doc.data()['conta_banco'],
-          email: e.payload.doc.data()['email']
+          email: e.payload.doc.data()['email'],
+          banco: e.payload.doc.data()['banco']
         }
       })
     })
@@ -47,4 +48,20 @@ export class MeusdadosPage implements OnInit {
     this.nav.navigateForward('inicio');
   }
 
-}
+  AlterarDados(dados){
+
+    this.nav.navigateForward(["edita-dados", {
+      
+      emailprof: dados.email,
+      agencia: dados.agencia,
+      conta: dados.conta,
+      nomeprof: dados.nomeprof,
+      telprof: dados.telprof,
+      idcontato: dados.id,
+      banco: dados.banco
+
+    }]);
+  }
+  }
+
+

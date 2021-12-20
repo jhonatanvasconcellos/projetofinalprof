@@ -19,4 +19,13 @@ export class DadoscliService {
   listDados(){
     return this.firestore.collection('Profissional').snapshotChanges();
   }
+
+  alterar(id,tarefa){
+    this.firestore.doc("Profissional/"+id).update(tarefa);
+  }
+
+  listarservico(){
+    return this.firestore.collection('Chamados').snapshotChanges();
+  }
+
 }

@@ -15,6 +15,7 @@ export class Cadastroprof2Page implements OnInit {
   telefone:string;
   conta:string;
   agencia:string;
+  banco:string;
 
   email: string;
   senha: string;
@@ -41,6 +42,7 @@ export class Cadastroprof2Page implements OnInit {
     prof['conta_banco'] = this.conta;
     prof['Ag_banco'] = this.agencia;
     prof['email'] = this.email;
+    prof['banco'] = this.banco;
 
     let usr = {};
     usr['email'] = this.email;

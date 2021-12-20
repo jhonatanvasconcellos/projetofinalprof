@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-ajuda',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AjudaPage implements OnInit {
 
-  constructor() { }
+  constructor(private nav: NavController) { }
 
   ngOnInit() {
+  }
+
+  irParaInicio(){
+    this.nav.navigateForward('inicio');
   }
 
 }

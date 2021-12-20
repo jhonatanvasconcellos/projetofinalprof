@@ -18,13 +18,15 @@
       <ion-card *ngFor='let it of dados' [hidden]='it.email !== emailLogado'>
           <ion-card-header>
             <ion-card-title>{{it.nomeprof}}</ion-card-title>
-            <ion-card-subtitle>{{it.telprof}}</ion-card-subtitle>
-            <ion-card-subtitle>{{it.agencia}}</ion-card-subtitle>
-            <ion-card-subtitle>{{it.conta}}</ion-card-subtitle>
             <ion-card-subtitle>{{it.email}}</ion-card-subtitle>
+            <ion-card-subtitle>Telefone: {{it.telprof}}</ion-card-subtitle>
+            <ion-card-subtitle>Agência: {{it.agencia}}</ion-card-subtitle>
+            <ion-card-subtitle>CC/CP: {{it.conta}}</ion-card-subtitle>
+            <ion-card-subtitle>Banco: {{it.banco}}</ion-card-subtitle>
+
           </ion-card-header>
           <ion-card-content>
-            <ion-button (click)='AlterarDados()'>alterar</ion-button>
+            <ion-button shape="round"(click)='AlterarDados(it)'>alterar</ion-button>
             
           </ion-card-content>
         </ion-card>

@@ -1,9 +1,24 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>edita-dados</ion-title>
-  </ion-toolbar>
-</ion-header>
+    <ion-toolbar>
+      <ion-title>Editar Dados</ion-title>
+      <ion-buttons slot="start">
+        <ion-menu-button autoHide="false"></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button (click)='irParaInicio()'>
+          <ion-icon name="close-circle-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  
+  </ion-header>
 
 <ion-content>
+  <ion-input type="text" placeholder="Nome" [(ngModel)]="nomeprof"></ion-input>
+  <ion-input type="text" placeholder="Telefone" [(ngModel)]="telprof"></ion-input>
+  <ion-input type="text" placeholder="Agencia" [(ngModel)]="agencia"></ion-input>
+  <ion-input type="text" placeholder="Conta" [(ngModel)]="conta"></ion-input>
+  <ion-input type="text" placeholder="Banco" [(ngModel)]="banco"></ion-input>
 
+  <ion-button shape="round"(click)="cadastrar()">Ok</ion-button>
 </ion-content>
