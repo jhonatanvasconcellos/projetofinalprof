@@ -54,6 +54,10 @@ const routes: Routes = [
     path: 'edita-dados',
     loadChildren: () => import('./paginasprof/edita-dados/edita-dados.module').then( m => m.EditaDadosPageModule)
   },
+  {
+    path: 'servicoaberto',
+    loadChildren: () => import('./paginasprof/servicoaberto/servicoaberto.module').then( m => m.ServicoabertoPageModule)
+  },
 
 ];
 

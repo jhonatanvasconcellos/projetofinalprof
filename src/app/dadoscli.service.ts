@@ -27,5 +27,8 @@ export class DadoscliService {
   listarservico(){
     return this.firestore.collection('Chamados').snapshotChanges();
   }
-
+  
+  excluir(chamados){
+    this.firestore.doc("Chamados/"+chamados.id).delete();
+  }
 }
